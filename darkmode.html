@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            position: relative;
+            width: 200px;
+            display: flex;
+            height: 100px;
+            border-radius: 100px;
+            border: 2px solid rgb(5, 5, 66);
+            transition: all 0.1s linear 0s;
+        }
+        button:hover{
+            transform: scale(1.04);
+            cursor: pointer;
+        }
+        .stc{
+            height: 100%;
+            width: 50%;
+            border: 1px solid;
+            border-radius: 50%;
+            background-color: aqua;
+            transition: all 0.1s linear 0s;
+        }
+        .right{
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            height: 100%;
+            width: 40%;
+        }
+        .right h2{
+            font-weight: bolder;
+        }
+        .left{
+            position: absolute;
+            top: 25%;
+            left: 5%;height: 100%;
+            width: 40%;
+        }
+        .left h2{
+            font-weight: bolder;
+        }
+        
+        
+        
+
+    </style>
+</head>
+<body>
+    <button>
+        <div class="right"><h2></h2></div>
+        <div class="stc"></div>
+        <div class="left"><h2></h2></div>
+    </button>
+    <script>
+        let stc = document.querySelector(".stc")
+        let button = document.querySelector("button")
+        let body = document.querySelector("body")
+        let right = document.querySelector(".right")
+        let left = document.querySelector(".left")
+        let flag = true
+        button.addEventListener("click",function(){
+            if (flag == true) {
+                body.style.backgroundColor = "#212121"
+                right.querySelector("h2").innerText = ""
+                left.querySelector("h2").innerText = "Dark Mode ON"
+                stc.style.transform = "translateX(100%)"
+                flag = false 
+                
+                               
+            }
+            else{
+                body.style.backgroundColor = "white"
+                left.querySelector("h2").innerText = "" 
+                right.querySelector("h2").innerText = "Dark Mode OFF"
+                stc.style.transform = "translateX(0%)"
+                flag = true 
+                
+                
+            }
+        })
+    </script>
+</body>
+</html>
