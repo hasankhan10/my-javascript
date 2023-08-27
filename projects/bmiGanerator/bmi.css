@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(141, 141, 213, 0.86);
+}
+input{
+   height:35px;
+   border-radius: 5px;
+   text-align: center;
+   border: none;
+   transition: all 0.2s linear;
+}
+input:hover{
+    transform: scale(1.04);
+}
+#cal{
+    background-color:rgb(222, 179, 10);
+    width: 90px;
+    font-weight: 600;
+
+}
+#result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    font-size: 22px;
+    width: 125px;
+}

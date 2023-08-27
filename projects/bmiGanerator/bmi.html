@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmi generator</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <nav>
+        <h1>Calculate Your BMI </h1>
+    </nav>
+    <br>
+
+    <main>
+        <form action="">
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+            <br><br>
+
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+            <br><br>
+            <input id="cal" type="submit" value="Calculate">
+            
+        </form> <br>
+        <div id="result">
+            <h3>Result: <span></span></h3>
+        </div>
+        <br>
+        <div id="obj">
+            <h3>Your BMI Result is: <span></span> </h3>
+        </div>
+    </main>
+
+    <script src="bmi.js"></script>
+</body>
+</html>
